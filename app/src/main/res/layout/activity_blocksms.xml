@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Blocksms">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/block_number_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:prefixText="+91"
+                    app:prefixTextColor="@color/green"
+                    android:hint="Enter number"
+                    android:textColorHint="@color/green"
+                    app:boxStrokeColor="@color/blue"
+                    app:startIconTint="@color/blue"
+                    app:counterTextColor="@color/black"
+                    app:startIconDrawable="@drawable/mobile_logo"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/blocksmscontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:autofillHints="phone"
+                        android:textColor="@color/green"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Block_pick_contact"
+                    android:background="@drawable/contact_logo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Number should be 10 digit. Do not add +91"
+                android:textColor="@color/green"
+                android:textSize="16sp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/blockNbtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/blue"
+                android:elevation="5dp"
+                android:text="Block Number"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:cornerRadius="10dp"
+                android:layout_marginBottom="10dp"
+                app:elevation="5dp"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                android:padding="5dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/blocksmsRV">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

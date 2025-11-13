@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Hello World!" />
+    <Button
+        android:id="@+id/subscribe_BT"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="SUBSCRIBE"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/Text"
+        />
+
+    <Button
+        android:id="@+id/logout_BT"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="LOGOUT"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/text1"
+        />
+        <Button
+            android:id="@+id/block_BT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="BLOCK CONTACTS"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/Text"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:strokeColor="@color/green"
+        app:strokeWidth="1dp"
+        android:layout_centerInParent="true"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Enter Details"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="center_horizontal"
+                        android:clickable="true"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/my_switchin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:text="Message after call ended"
+                        android:layout_gravity="center"
+                        android:textColor="@color/blue"
+                        android:checked="true"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/message_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="5dp"
+                        android:hint="Enter message"
+
+                        android:textColorHint="@color/green"
+                        app:boxStrokeColor="@color/blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/entermsgET_IN"
+                            android:layout_width="match_parent"
+                            android:layout_height="370dp"
+                            android:inputType="text|textMultiLine|textCapSentences|textAutoCorrect|textAutoComplete|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textEmailAddress|textUri|textVisiblePassword|textWebEditText|textNoSuggestions|textImeMultiLine|textPhonetic|textWebEmailAddress|textWebPassword"
+                            android:textColor="@color/green"
+                            android:gravity="top" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/setbtn_IN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/blue"
+                        android:elevation="5dp"
+                        android:text="Set"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:elevation="5dp"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/white" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

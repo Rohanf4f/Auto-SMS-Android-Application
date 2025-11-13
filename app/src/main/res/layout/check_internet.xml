@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nointernet"
+    android:background="#FFFFFF">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/network_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:strokeColor="@color/teal_200"
+            app:strokeWidth="2dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        app:lottie_rawRes="@raw/animation1111"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Slow or no internet connection!"
+                        android:textColor="@color/teal_700"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please check your internet settings."
+                        android:textColor="@color/teal_700"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="50dp"
+                        android:id="@+id/btnretry"
+                        android:backgroundTint="@color/blue"
+                        android:text="Retry"
+                        android:textSize="22sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--        <androidx.appcompat.widget.AppCompatButton-->
+        <!--            android:id="@+id/btnretry"-->
+        <!--            android:layout_width="336dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_marginStart="40dp"-->
+        <!--            android:layout_marginEnd="40dp"-->
+        <!--            android:layout_marginBottom="2dp"-->
+        <!--            android:background="#1233E6"-->
+        <!--            android:text="Retry"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textStyle="bold">-->
+
+        <!--        </androidx.appcompat.widget.AppCompatButton>-->
+    </RelativeLayout>
+</RelativeLayout>
